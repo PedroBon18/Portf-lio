@@ -1,98 +1,130 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Remove espaçamentos padrão de todos os elementos 
+   e garante que padding/bordas entrem no cálculo do tamanho */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define a fonte padrão do site, cor de fundo escura,
+     texto claro, espaço entre linhas e um espaçamento geral */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0F0F10;
+    color: #ddd;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Estilo da foto de perfil: tamanho fixo, redonda,
+     imagem não esticada, sombra e espaçamento embaixo */
+  .perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Cabeçalho centralizado com espaçamento, fundo escuro
+     e texto branco */
+  header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #222;
+    color: white;
+  }
+  
+  /* Cada seção do site terá largura máxima de 800px,
+     centralizada e com espaçamento lateral */
+  section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* Títulos com espaço abaixo e uma linha cinza 
+     para destacar */
+  h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  /* Container de cards em "flex", que se ajusta 
+     em várias linhas com espaço entre eles */
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0F0F10;
-  color: #ddd;
-  line-height: 1.6;
-  padding: 20px;
-}
+   
+  /* Cada card tem fundo escuro, padding interno,
+     bordas arredondadas e uma leve sombra */
+     .card {
+      display: block;              
+      background: #02e12e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-decoration: none;       
+      color: inherit;              
+      transition: transform 0.2s;  
+      margin: 10px;               /* espaço ao redor de cada card */
+    }
+    
+    .card:hover {
+      transform: scale(1.05);     
+      cursor: pointer;            /* faltava completar aqui */
+    }
+    
 
-.perfil {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-}
-
-header {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #222;
-  color: white;
-}
-
-section {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-h2 {
-  margin-bottom: 10px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background: #0F0F10;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1 1 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-#contato ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-}
-
-#contato a {
-  text-decoration: none;
-  color: #0077cc;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  background-color: #222;
-  color: white;
-  margin-top: 40px;
-}
-
-.botoes-contato {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.btn {
-  background-color: #0077cc;
-  color: white;
-  margin-right: 8px;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #005fa3;
-}
+  /* Lista de contatos sem bolinhas, em linha horizontal,
+     com espaçamento entre itens */
+  #contato ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  /* Links de contato sem sublinhado e na cor azul */
+  #contato a {
+    text-decoration: none;
+    color: #02e12e;
+  }
+  
+  /* Rodapé centralizado, com fundo escuro, texto branco,
+     fonte menor e espaçamento */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #222;
+    color: white;
+    margin-top: 40px;
+  }
+  
+  /* Container dos botões de contato: ficam lado a lado,
+     com espaço entre eles e centralizados */
+  .botoes-contato {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilo dos botões: fundo azul, texto branco,
+     padding interno, borda arredondada e transição suave */
+  .btn {
+    background-color: #02e12e;
+    color: white;
+    margin-right: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Quando passa o mouse no botão, fica azul mais escuro */
+  .btn:hover {
+    background-color: #05ba26;
+  }
